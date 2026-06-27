@@ -1,10 +1,5 @@
 # 🫀 Predict Healthcare Outcomes with Scikit-learn, SHAP, and Streamlit
 
-**Partnr Network | Arepalli Venkata Lakshmi**  
-**Domain:** Data Science · Machine Learning | **Difficulty:** Intermediate
-
----
-
 ## 📋 Project Overview
 
 An end-to-end clinical machine learning pipeline that:
@@ -191,28 +186,3 @@ RANDOM_SEED=42
 
 ---
 
-## 📹 Video Demo
-
-Record a 3–5 minute walkthrough:
-1. Show the Streamlit dashboard running
-2. Enter a high-risk patient and explain the SHAP waterfall
-3. Demonstrate the financial impact calculator
-4. Summarise the top 3 SHAP features and clinical recommendations
-
----
-
-## ⚠️ Notes
-
-- If the real UCI CSV is unavailable, the system auto-generates synthetic data that mirrors the UCI schema (303 patients, same features, realistic distributions).
-- SHAP computation uses `TreeExplainer` for Random Forest (fast) and falls back to `KernelExplainer` for MLP.
-- All random seeds are fixed at 42 for reproducibility.
-
----
-
-## 📚 References
-
-- [UCI Heart Disease Dataset](https://archive.ics.uci.edu/ml/datasets/heart+disease)
-- [SHAP Documentation](https://shap.readthedocs.io/en/latest/)
-- [Scikit-learn Cross-Validation](https://scikit-learn.org/stable/modules/cross_validation.html)
-- [Streamlit Documentation](https://docs.streamlit.io/)
-- [Handling Missing Data – Scikit-learn](https://scikit-learn.org/stable/modules/impute.html)
