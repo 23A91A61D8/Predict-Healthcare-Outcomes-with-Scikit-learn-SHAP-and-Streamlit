@@ -1,0 +1,21 @@
+{
+  "confusion_counts": {
+    "TP": 186,
+    "FP": 21,
+    "TN": 179,
+    "FN": 14
+  },
+  "model_total_cost": -237200.0,
+  "baseline_treat_all_cost": -340000.0,
+  "baseline_treat_none_cost": -1700000.0,
+  "model_vs_treat_all_savings": 102800.0,
+  "model_vs_treat_none_savings": 1462800.0,
+  "n_patients": 400,
+  "prevalence": 0.5,
+  "cost_matrix_used": {
+    "TP": -500.0,
+    "FP": -1200.0,
+    "TN": 0.0,
+    "FN": -8500.0
+  }
+}

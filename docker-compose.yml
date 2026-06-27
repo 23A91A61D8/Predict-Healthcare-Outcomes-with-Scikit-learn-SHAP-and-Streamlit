@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${STREAMLIT_PORT:-8501}:8501"
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./metrics:/app/metrics
+      - ./reports:/app/reports
+    environment:
+      - DATA_PATH=${DATA_PATH:-/app/data/raw/heart_disease.csv}
+      - MODEL_SAVE_DIR=${MODEL_SAVE_DIR:-/app/models}
+      - STREAMLIT_PORT=${STREAMLIT_PORT:-8501}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
